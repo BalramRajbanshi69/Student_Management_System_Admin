@@ -145,7 +145,7 @@ const [error, setError] = useState<FieldError | undefined>(undefined);
           <Input
             type="email"
             value={emailTwo}
-            success={!error} // Pass success based on error state
+             success={error === undefined} // Pass success based on error state
             onChange={handleEmailTwoChange}
             placeholder="Enter your email"
             hint={!error ? "This is a success message." : ""}
