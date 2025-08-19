@@ -94,8 +94,8 @@ interface StudentFormInputs {
                             {...register("age", {
                                 required: "Age is required",
                                 min: {
-                                    value: 16,
-                                    message: "Student must be at least 16 years old"
+                                    value: 10,
+                                    message: "Student must be at least 10 years old"
                                 }
                             })} />
                             {errors.age && (
