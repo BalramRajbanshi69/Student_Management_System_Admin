@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { EyeCloseIcon, EyeIcon } from "../../icons";
 import Label from "../form/Label";
 import Checkbox from "../form/input/Checkbox";
@@ -90,7 +90,7 @@ export default function SignInForm() {
                   </Label>
                   <Input 
                     type="text" 
-                    placeholder="info@gmail.com" 
+                    placeholder="email => admin@gmail.com" 
                     error={errors.email}
                     {...register("email", {
                       required: "Email is required",
@@ -111,7 +111,7 @@ export default function SignInForm() {
                   <div className="relative">
                     <Input 
                       type={showPassword ? "text" : "password"}
-                      placeholder="Enter your password"
+                      placeholder="password => admin"
                       error={errors.password}
                       {...register("password", {
                         required: "Password is required"
@@ -142,14 +142,14 @@ export default function SignInForm() {
                   {/* ... (forgot password link commented out) */}
                 </div>
                 <div>
-                  <Button className="w-full" size="sm">
+                  <Button className="h-11 w-full border appearance-none px-4 py-2.5 text-sm shadow-theme-xs placeholder:text-gray-400 focus:outline-hidden focus:ring-3 dark:bg-gray-900 dark:text-white/90 dark:placeholder:text-white/30 bg-transparent text-gray-800 border-gray-300 focus:border-brand-300 focus:ring-brand-500/20 dark:border-gray-700 dark:text-white/90 dark:focus:border-brand-800" size="sm">
                     Sign in
                   </Button>
                 </div>
               </div>
             </form>
 
-            <div className="mt-5">
+            {/* <div className="mt-5">
               <p className="text-sm font-normal text-center text-gray-700 dark:text-gray-400 sm:text-start">
                 Don&apos;t have an account? {""}
                 <Link
@@ -159,7 +159,7 @@ export default function SignInForm() {
                   Sign Up
                 </Link>
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
