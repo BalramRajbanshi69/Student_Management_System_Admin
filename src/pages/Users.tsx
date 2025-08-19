@@ -10,8 +10,8 @@ const Users = () => {
   return (
     <div>
         <PageMeta
-        title="Admin SMS Dashboard | TailAdmin - React.js Admin Dashboard Template"
-        description="This is React.js Form Elements  Dashboard page for TailAdmin - React.js Tailwind CSS Admin Dashboard Template"
+        title="Admin SMS Dashboard | Admin SMS- React.js Admin Dashboard Template"
+        description="This is React.js Form Elements  Dashboard page for Admin SMS- React.js Tailwind CSS Admin Dashboard Template"
       />
       <PageBreadcrumb pageTitle="All Users" />
        <div className="space-y-6">

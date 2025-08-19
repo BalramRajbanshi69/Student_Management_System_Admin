@@ -17,8 +17,8 @@ export default function AddStudents() {
   return (
     <div className="bg-gray-50 dark:bg-gray-900 min-h-screen px-4">
       <PageMeta
-        title="Admin SMS Dashboard  | TailAdmin - React.js Admin Dashboard Template"
-        description="This is React.js Form Elements  Dashboard page for TailAdmin - React.js Tailwind CSS Admin Dashboard Template"
+        title="Admin SMS Dashboard  | Admin SMS- React.js Admin Dashboard Template"
+        description="This is React.js Form Elements  Dashboard page for Admin SMS- React.js Tailwind CSS Admin Dashboard Template"
       />
       <PageBreadcrumb pageTitle="Add Students" />
       <div className="flex flex-col items-center justify-center ">
