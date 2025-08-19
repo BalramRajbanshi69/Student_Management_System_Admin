@@ -83,6 +83,8 @@ import ComponentCard from "../../common/ComponentCard";
 import Input from "../input/InputField";
 import Label from "../Label";
 
+
+
 // Define the FieldError type
 interface FieldError {
   message: string;
@@ -92,7 +94,7 @@ interface FieldError {
 export default function InputStates() {
   const [email, setEmail] = useState("");
   const [emailTwo, setEmailTwo] = useState("");
-  const [error, setError] = useState<FieldError | null>(null); // Change to FieldError type
+const [error, setError] = useState<FieldError | undefined>(undefined);
 
   // Simulate a validation check
   const validateEmail = (value: string) => {
@@ -101,7 +103,7 @@ export default function InputStates() {
     if (!isValidEmail) {
       setError({ message: "This is an invalid email address.", type: "email" });
     } else {
-      setError(null); // Clear error if valid
+      setError(undefined); // Clear error if valid
     }
     return isValidEmail;
   };
@@ -130,10 +132,10 @@ export default function InputStates() {
           <Input
             type="email"
             value={email}
-            // error={error} // Pass the FieldError object
+            error={error} // Pass the FieldError object or null
             onChange={handleEmailChange}
             placeholder="Enter your email"
-            hint={error ? error.message : ""}
+            hint={error ? error.message : ""} // Show error message if exists
           />
         </div>
 
@@ -143,7 +145,7 @@ export default function InputStates() {
           <Input
             type="email"
             value={emailTwo}
-            success={!error}
+            success={!error} // Pass success based on error state
             onChange={handleEmailTwoChange}
             placeholder="Enter your email"
             hint={!error ? "This is a success message." : ""}
